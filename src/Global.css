@@ -1,0 +1,48 @@
+:root {
+  --gray-100: #f2f2f2;
+  --gray-200: #d9d9d9;
+  --gray-300: #808080;
+  --gray-400: #333333;
+  --gray-500: #262626;
+  --gray-600: #1a1a1a;
+  --gray-700: #0d0d0d;
+
+  --backgorund: #454545;
+
+  --purple: #8284fa;
+  --puple-dark: #5e60ce;
+  --blue: #4ea8de;
+  --blue-dark: #1e6f9f;
+  --danger: #e25858;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 1px var(--purple);
+}
+
+body {
+  background-color: var(--gray-600);
+  color: var(--gray-100);
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+input,
+button {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+button,
+input[type="checkbox"] {
+  cursor: pointer;
+}

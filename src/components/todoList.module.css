@@ -1,0 +1,219 @@
+.Body {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+}
+
+.Body > form {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: -1.68rem;
+  margin-bottom: 4rem;
+}
+
+.Body > form > input[type="text"] {
+  height: 3.36rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  color: var(--gray-100);
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-700);
+}
+
+.Body > form > input[type="text"]::placeholder {
+  color: var(--gray-300);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.Body > form > button {
+  font-size: 0.875rem;
+  border: 0;
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+  font-weight: bold;
+  line-height: 0;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 6rem;
+  height: 3.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  transition: background-color 0.2s, filter 0.2s;
+}
+
+.Body > form > button:hover {
+  background-color: var(--blue);
+  filter: brightness(1.2);
+}
+
+.List > .Info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.TodoCreate,
+.TodoConcluid {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: bold;
+  color: var(--blue);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.TodoCreate > span,
+.TodoConcluid > span {
+  display: block;
+  background-color: var(--gray-400);
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+  min-width: 1.5rem;
+
+  line-height: 1rem;
+  font-size: 0.75rem;
+
+  color: var(--gray-100);
+}
+
+.TodoConcluid {
+  color: var(--purple);
+}
+
+.ListOfTodo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 37rem;
+  overflow-y: auto;
+}
+
+.NoteItens {
+  border-top: 1px solid var(--gray-400);
+  height: 37rem;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.ListOfTodo > div {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--gray-500);
+  border-radius: 8px;
+  padding: 1rem;
+
+  font-size: 0.875rem;
+  line-height: 1.4;
+
+  border: 1px solid var(--gray-700);
+}
+
+.ListOfTodo > div input[type="checkbox"] {
+  visibility: hidden;
+  width: 1.5rem;
+  min-width: none;
+}
+
+.ListOfTodo > div input[type="checkbox"]:not(:checked):before {
+  content: "";
+  visibility: visible;
+  display: inline-block;
+  height: 0.875rem;
+  width: 0.875rem;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1rem;
+  border: 2px solid var(--blue);
+
+  transition: opacity 0.2s;
+}
+.ListOfTodo > div input[type="checkbox"]:checked::before {
+  content: "";
+  border-radius: 50%;
+  visibility: visible;
+  height: 18px;
+  width: 18px;
+  background-color: var(--purple);
+  border: 0;
+  display: inline-block;
+
+  transition: filter 0.2s;
+}
+
+.ListOfTodo > div input[type="checkbox"]:checked::after {
+  content: "";
+  visibility: visible;
+
+  height: 8px;
+  width: 4px;
+  border-bottom: 2px solid var(--gray-100);
+  border-right: 2px solid var(--gray-100);
+  transform: rotate(45deg);
+  margin-top: -19px;
+  margin-left: 6px;
+  display: flex;
+}
+
+.ListOfTodo > div input[type="checkbox"]:checked:hover::before {
+  filter: brightness(1.2);
+}
+
+.ListOfTodo > div input[type="checkbox"]:not(:checked):hover:before {
+  opacity: 0.6;
+}
+
+.ListOfTodo strong {
+  flex: 1;
+  margin-left: 0.4rem;
+  text-align: left;
+}
+
+.buttonTrash {
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  padding: 0;
+  color: var(--gray-100);
+  width: 1.5rem;
+  height: 1.3rem;
+}
+
+.buttonTrash:hover {
+  color: var(--danger);
+  background-color: var(--gray-400);
+  border-radius: 2px;
+}
+
+.taskConcluid {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+@media (max-width: 750px) {
+  .Body > form {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .Body > form > button {
+    width: 100%;
+  }
+}
